@@ -1,0 +1,28 @@
+const data = {
+  coord: { lon: -96.7836, lat: 32.7668 },
+  weather: [{ id: 701, main: "Mist", description: "mist", icon: "50d" }],
+  base: "stations",
+  main: {
+    temp: 293.96,
+    feels_like: 294.6,
+    temp_min: 292.97,
+    temp_max: 294.74,
+    pressure: 1025,
+    humidity: 96,
+  },
+  visibility: 6437,
+  wind: { speed: 3.09, deg: 120 },
+  clouds: { all: 100 },
+  dt: 1667916703,
+  sys: {
+    type: 2,
+    id: 2075302,
+    country: "US",
+    sunrise: 1667911863,
+    sunset: 1667950246,
+  },
+  timezone: -21600,
+  id: 4684904,
+  name: "Dallas",
+  cod: 200,
+};
