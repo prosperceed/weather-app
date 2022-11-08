@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  overflow: hidden;
+}
+
 .degree {
   font-size: 3rem;
   color: white;
@@ -87,16 +91,17 @@
 }
 
 .search-container {
-  position: relative;
-  top: 7%;
-  left: 40%;
-  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  /* transform: translateX(50% - 50%); */
+  padding: 1.5rem 0;
+  /* margin-left: 15rem; */
 }
 
 .search-input {
   outline: none;
-  height: 28px;
-  width: 260px;
+  height: 34px;
+  width: 500px;
   padding: 0px 6px;
   border-radius: 14px;
   background: rgba(253, 237, 237, 0.7);
@@ -108,14 +113,26 @@
 }
 
 @media screen and (max-width: 600px) {
-  .data-desc {
+  .desc {
     word-break: break-all;
-    position: relative;
-    right: -2%;
-    top: 160%;
+    /* display: flex; */
+    position: absolute;
+    /* flex-direction: column; */
+    /* right: 20%; */
+    margin-right: 4rem;
+    text-align: center;
+    top: 29%;
+  }
+
+  .container {
+    width: 100%;
   }
 
   .bottom {
     width: 100%;
+  }
+
+  .search-container {
+    margin: 0 auto;
   }
 }
