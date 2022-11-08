@@ -36,31 +36,34 @@ function App() {
             <h1 className="name">{data.name}</h1>
           </div>
           <div className="data-desc">
-            <h5 className="desc">
-              {" "}
-              Weather condition:{" "}
-              <strong className="font-bold">
-                {data.weather[0].description}
-              </strong>
-            </h5>
+            {data.weather ? (
+              <h5 className="desc">
+                Weather condition:{" "}
+                <strong className="font-bold">{data.weather[0].main}</strong>
+              </h5>
+            ) : null}
           </div>
           <div className="data-degree">
-            <h2 className="degree">{data.main.temp}°F </h2>
+            {data.main ? <h2 className="degree">{data.main.temp}°F </h2> : null}
           </div>
         </div>
 
         <div className="bottom">
           <div className="feels-like">
-            <h3 className="feel">{data.main.feels_like}°F</h3>
+            {data.main ? (
+              <h3 className="feel">{data.main.feels_like}°F</h3>
+            ) : null}
             <p className="feel-value">feels Like</p>
           </div>
           <div className="humidity-div">
-            <h3 className="humidity">{data.main.humidity}%</h3>
+            {data.main ? (
+              <h3 className="humidity">{data.main.humidity}%</h3>
+            ) : null}
             <p className="humidity-value">Humidity</p>
           </div>
 
           <div className="wind-div">
-            <h3 className="wind"> MPH</h3>
+            {data.wind ? <h3 className="wind"> {data.wind.speed}MPH</h3> : null}
             <p className="wind-value">Winds</p>
           </div>
         </div>
